@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Auto } from './auto.model';
 
 @Component({
   selector: 'app-root',
