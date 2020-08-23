@@ -1,6 +1,0 @@
-<h1>Número de Autos Vendidos: <b> #{{ contador}} </b></h1>
-<hr>
-
-<div class="container" *ngFor = "let auto of autos">
-    <app-auto (seVendidoAuto)="addCarrosVendidos()" [auto] = "auto"></app-auto>
-</div>

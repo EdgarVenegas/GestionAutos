@@ -1,0 +1,28 @@
+<!--
+<h2> {{ auto.nombre }}</h2>
+<img [src]="auto.imagen" alt="">
+<p> {{ auto.descripcion }} </p>
+<button (click)= "comprar(auto.id)">Comprar</button>
+-->
+
+<mat-card>
+    <mat-card-header color="primary">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ auto.nombre }}</mat-card-title>
+      <mat-card-subtitle>{{ auto.modelo }}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="img-fluid" mat-card-image [src]="auto.imagen" [alt]="auto.nombre" />
+    <mat-card-content>
+      <p>
+        {{ auto.descripcion }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">
+        <mat-icon>add_shopping_cart</mat-icon> Añadir al carrito
+      </button>
+      <button mat-raised-button>
+        <mat-icon>local_offer </mat-icon>Ver detalle
+      </button>
+    </mat-card-actions>
+  </mat-card>

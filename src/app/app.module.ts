@@ -1,34 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
-// Componentes DEMO
-import { DemoComponent} from './components/demo/demo.component';
-import { DemoAutoComponent} from './components/demo.auto/auto.component';
-
-// Compoentnes Padre / Hijo
-import { AutosComponent } from './components/autos/autos.component';
-import { AutoComponent} from './components/auto/auto.component';
+import { SharedModule } from './shared/shared.module';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent,
-    DemoAutoComponent,
-    AutosComponent,
-    AutoComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -1,0 +1,22 @@
+<h2> {{ nombreAuto }} </h2>
+<input type="text" [(ngModel)] = "nombreAuto">
+
+<div *ngIf = "nombreAuto === 'Altima'">
+    <strong> El precio de este auto es mayor a 300,000</strong>
+</div>
+
+<div [ngSwitch] = "nombreAuto">
+    <div *ngSwitchCase = "'Sentra'">
+        <strong> El precio de este auto es mayor a 200,000</strong>
+    </div>
+    <div *ngSwitchCase = "'Versa'">
+        <strong> El precio de este auto es mayor a 100,000</strong>
+    </div>
+    <div *ngSwitchDefault>
+        No se encontro el auto
+    </div>
+</div>
+
+<ul>
+    <li *ngFor=" let auto of listaAutos; index as i "> {{ auto }} {{ i }} </li>
+</ul>
