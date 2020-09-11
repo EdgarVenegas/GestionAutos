@@ -1,12 +1,13 @@
 import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
-import { Auto } from '../../../auto.model';
+import { Auto } from '@core/models/auto.model';
 
 @Component({
   selector: 'app-autos',
-  templateUrl: './autos.component.html',
-  styleUrls: ['./autos.component.scss']
+  templateUrl: './autos.container.html',
+  styleUrls: ['./autos.container.scss']
 })
-export class AutosComponent implements OnInit, OnChanges {
+// tslint:disable-next-line: component-class-suffix
+export class AutosContainer implements OnInit, OnChanges {
   autos: Auto[] = [
     {
       id : '1',

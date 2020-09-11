@@ -3,17 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { AutosRoutingModule } from './autos-routing.module';
 
-import { AutoComponent } from './components/auto/auto.component';
-import { AutosComponent} from './components/autos/autos.component';
-import { AutoDetailComponent } from './components/auto-detail/auto-detail.component';
+import { AutoComponent } from '../autos/components/auto/auto.component';
+import { AutosContainer} from '../autos/container/autos/autos.container';
+import { AutoDetailComponent } from '../autos/components/auto-detail/auto-detail.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
+
+import { RegistrarAutoComponent} from './container/registrar-auto/registrar-auto.component';
+import { AutoRegistrarComponent } from './components/auto-registrar/auto-registrar.component';
 
 @NgModule({
   declarations: [
     AutoComponent,
-    AutosComponent,
-    AutoDetailComponent
+    AutosContainer,
+    AutoDetailComponent,
+    RegistrarAutoComponent,
+    AutoRegistrarComponent
   ],
   imports: [
     CommonModule,

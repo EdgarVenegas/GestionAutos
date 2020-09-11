@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Auto } from '../../../auto.model';
+import { Auto } from '@core/models/auto.model';
 
 @Component({
   selector: 'app-auto',
