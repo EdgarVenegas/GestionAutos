@@ -1,0 +1,33 @@
+<div class="col-md-12">
+    <div class="card card-profile">
+      <div class="card-avatar">
+        <a href="javascript:void(0)">
+          <img class="img" [src]="imagen" />
+        </a>
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <dx-form [(formData)]="model">
+                <dxi-item dataField="Username">
+                    <dxo-label text="Usuario"></dxo-label>
+                </dxi-item>
+                <dxi-item dataField="Password" editorType="dxTextBox" [editorOptions]="{
+                    mode:'password'
+                }">
+                  <dxo-label text="Contraseña"></dxo-label>
+              </dxi-item>
+              <dxi-item dataField="FechaNacimiento" editorType="dxDateBox">
+                <dxo-label text="Fecha de Nacimiento"></dxo-label>
+            </dxi-item>
+            </dx-form>
+          </div>
+        </div>
+  
+        <button (click)="iniciarSesion()" class="btn btn-info btn-round">
+          Iniciar Sesión
+        </button>
+      </div>
+    </div>
+  </div>
+  

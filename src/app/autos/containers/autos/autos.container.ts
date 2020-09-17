@@ -43,8 +43,6 @@ export class AutosContainer implements OnInit, OnChanges {
     }
   ];
 
-  // @Input() title: string;
-
   contador = 0;
 
   constructor() {
