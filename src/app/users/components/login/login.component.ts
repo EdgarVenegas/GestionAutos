@@ -1,5 +1,5 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { LoginModel } from '@core/models/login.model';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { LoginInputModel } from '@core/models/loginInputModel.model';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,9 @@ import { LoginModel } from '@core/models/login.model';
 export class LoginComponent implements OnInit, OnChanges {
 
   @Input() imagen: string;
-  @Input() model: LoginModel;
+  @Input() model: LoginInputModel;
+  @Output() loginClicked: EventEmitter<any> = new EventEmitter();
+
   opciones = {
     onValueChanges: 'fechaCambio()'
   };
@@ -24,12 +26,12 @@ export class LoginComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
-  iniciarSesion(): void {
-    console.log(this.model);
+  loginOnClick(): void {
+    this.loginClicked.emit();
   }
 
   fechaCambio(): void {
-    console.log('Cambio la fecha');
+    console.log('Cambio la fehca');
   }
 
 }

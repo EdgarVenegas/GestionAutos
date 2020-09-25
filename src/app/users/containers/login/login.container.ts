@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { LoginModel } from '@core/models/login.model';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginInputModel } from '@core/models/loginInputModel.model';
+import { NotifyService } from '@core/services/notify.service';
+import { UserService } from '@core/services/user.service';
 
 @Component({
   selector: 'app-login-container',
@@ -10,15 +13,25 @@ import { LoginModel } from '@core/models/login.model';
 export class LoginContainer implements OnInit {
 
   imagen = './assets/images/perfil.jpg';
-  model: LoginModel = {
-    Password: '',
-    Username: '',
-    FechaNacimiento: null
+  model: LoginInputModel = {
+    password: '',
+    correoElectronico: ''
+  };
+
+  constructor(
+    private userService: UserService,
+    private route: Router,
+    private notifyService: NotifyService
+  ) { }
+  ngOnInit(): void {
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  login(): void {
+    this.userService.iniciarSesion(this.model).subscribe(response => {
+      this.userService.guardarUsuario(response.dataResponse);
+      this.notifyService.mostrarNotificacion('success', `Bienvenido ${response.dataResponse.username}`);
+      setTimeout(() => this.route.navigate(['/admin/home']), 3000);
+    });
   }
 
 }

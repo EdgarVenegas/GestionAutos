@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { NotFoundComponent} from './shared/components/not-found/not-found.component';
-import { LayoutComponent} from './layout/layout.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { LayoutComponent } from './layout/layout.component';
 import { LayoutAdminComponent } from './layout-admin/layout-admin.component';
 import { AuthGuard } from '@shared/guards/auth.guard';
 import { LoginContainer } from './users/containers/login/login.container';
@@ -25,7 +25,7 @@ const routes: Routes = [
       },
       {
         path: 'marcas',
-        loadChildren: () => import('./marcas/marcas.module'). then (m => m.MarcasModule)
+        loadChildren: () => import('./marcas/marcas.module').then(m => m.MarcasModule)
       },
       {
         path: 'autos',
@@ -44,11 +44,11 @@ const routes: Routes = [
       },
       {
         path: 'users',
-        loadChildren: () => import('./users/users.module'). then (m => m.UsersModule)
+        loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
       },
       {
         path: 'autos',
-        loadChildren: () => import('./autos/autos.module'). then (m => m.AutosModule)
+        loadChildren: () => import('./autos/autos.module').then(m => m.AutosModule)
       },
       {
         path: 'marcas',

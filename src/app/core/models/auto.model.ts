@@ -1,4 +1,4 @@
-export interface Auto{
+export interface Auto {
     id: string;
     nombre: string;
     modelo: string;

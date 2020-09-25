@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LayoutComponent } from './layout/layout.component';
 import { LayoutAdminComponent } from './layout-admin/layout-admin.component';
+import { CoreModule } from '@core/core.module';
 
 
 @NgModule({
@@ -20,10 +21,10 @@ import { LayoutAdminComponent } from './layout-admin/layout-admin.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }

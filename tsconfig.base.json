@@ -18,9 +18,10 @@
     ],
     "paths": {
       "@shared/*": ["src/app/shared/*"],
-      "@core/*": ["src/app/core/*"],
+      "@core/*":["src/app/core/*"],
       "@material":["src/app/material/material.module"],
-      "@devextreme":["src/app/devextreme/devextreme.module"]
+      "@devextreme":["src/app/devextreme/devextreme.module"],
+      "@environments":["src/environments/environment"]
     }
   }
 }
