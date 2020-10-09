@@ -4,8 +4,28 @@
     </div>
     <div class="card-body table-responsive">
         <p> Realiza la modificación adecuada, escribiendo los datos corresponidientes en el siguiente formulario:</p>
-        <input style="width: 100%; font-size: 20px" />
         <hr>
-        <button type="button" class="btn btn-outline-secondary float-right">Editar</button>
+        <p>Nombre:</p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.editarAutoModel.nombre" />
+        <br>
+        <br>
+        <p>Numero de Motor: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.editarAutoModel.numeroMotor"/>
+        <br>
+        <br>
+        <p>Fecha de Ensamble: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.editarAutoModel.fechaEsamble" />
+        <br>
+        <br>
+        <p>Precio del Mercado: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.editarAutoModel.precioMercado"/>
+        <br>
+        <br>
+        <p>ID de la Marca: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.editarAutoModel.marcaId"/>
+        <br>
+        <br>
+        <hr>
+        <button type="button" class="btn btn-outline-secondary float-right" (click)="this.edit()" routerLink="../../" >Editar</button>
     </div>
 </div>

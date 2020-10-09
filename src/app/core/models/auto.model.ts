@@ -6,3 +6,12 @@ export interface Auto {
     descripcion: string;
     imagen: string;
 }
+
+export interface AutoModel{
+    autoId: string;
+    nombre: string;
+    numeroMotor: string;
+    fechaEsamble: string;
+    precioMercado: number;
+    marcaId: string;
+}

@@ -13,13 +13,15 @@
             <table class="table table-hover">
                 <thead class="text-warning">
                     <th class="text-center">#</th>
+                    <th>ID</th>
                     <th>Marcas</th>
                     <th class="text-right">Acciones</th>
                 </thead>
                 <tbody>
                     <tr *ngFor="let marca of this.marcas; index as i">
                         <td>{{ i + 1 }}</td>
-                        <td>{{marca.nombre}}</td>
+                        <td>{{ marca.id }}</td>
+                        <td>{{ marca.nombre }}</td>
                         <td class="td-actions text-right">
                             <button mat-raised-button type="button" class="btn btn-primary btn-link btn-sm btn-just-icon">
                                 <i class="material-icons"><a style="color: #43464b !important"  [routerLink]="'editar/'+marca.id">edit</a></i>

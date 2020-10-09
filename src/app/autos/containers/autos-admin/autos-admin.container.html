@@ -14,23 +14,25 @@
                 <thead class="text-danger">
                     <th class="text-center">#</th>
                     <th>Autos</th>
-                    <th>Modelo</th>
-                    <th>Año</th>
-                    <th>Descripción</th>
+                    <th>Numero de Motor</th>
+                    <th>Fecha de Ensable</th>
+                    <th>Precio del Mercado</th>
+                    <th>Marca ID</th>
                     <th class="text-right">Acciones</th>
                 </thead>
                 <tbody>
-                    <tr >
-                        <td> i + 1</td>
-                        <td>Nombre</td>
-                        <td>Modelo</td>
-                        <td>Año</td>
-                        <td>Descripción</td>
+                    <tr *ngFor="let auto of this.autos; index as i">
+                        <td> {{ i + 1 }} </td>
+                        <td> {{ auto.nombre}} </td>
+                        <td> {{ auto.numeroMotor}} </td>
+                        <td> {{ auto.fechaEsamble }} </td>
+                        <td> {{ auto.precioMercado }} </td>
+                        <td> {{ auto.marcaId }} </td>
                         <td class="td-actions text-right">
                             <button mat-raised-button type="button" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                <i class="material-icons"><a style="color: #43464b !important" routerLink="editar">edit</a></i>
+                                <i class="material-icons"><a style="color: #43464b !important" [routerLink]="'editar/'+auto.autoId">edit</a></i>
                             </button>
-                            <button mat-raised-button type="button" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                            <button mat-raised-button type="button" class="btn btn-danger btn-link btn-sm btn-just-icon" (click)="eliminarAuto(auto.autoId)">
                                 <i class="material-icons" style="color: #43464b !important">delete</i>
                             </button>
                         </td>

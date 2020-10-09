@@ -6,6 +6,8 @@ import { EditarAutoComponent } from './components/editar-auto/editar-auto.compon
 import { AutosContainer} from '../autos/containers/autos/autos.container';
 import { AutosAdminContainer } from './containers/autos-admin/autos-admin.container';
 import { RegistrarAutoComponent } from './components/registrar-auto/registrar-auto.component';
+import { EditarAutoContainer } from './containers/editar-auto/editar-auto.container';
+import { RegistrarAutoContainer } from './containers/registrar-auto/registrar-auto.container';
 
 const routes: Routes = [
   {
@@ -18,11 +20,11 @@ const routes: Routes = [
   },
   {
     path: 'catalogo/registrar',
-    component: RegistrarAutoComponent
+    component: RegistrarAutoContainer
   },
   {
-      path: 'catalogo/editar',
-      component: EditarAutoComponent
+      path: 'catalogo/editar/:id',
+      component: EditarAutoContainer
   },
   {
     path: ':id',

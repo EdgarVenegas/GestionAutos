@@ -12,7 +12,10 @@ import { AutosAdminContainer} from './containers/autos-admin/autos-admin.contain
 import { RegistrarAutoContainer } from './containers/registrar-auto/registrar-auto.container';
 
 import { SharedModule } from '../shared/shared.module';
-import { MaterialModule } from '../material/material.module';
+import { DevextremeModule } from '@devextreme';
+import { MaterialModule } from '@material';
+import { FormsModule } from '@angular/forms';
+
 import { EditarAutoComponent } from './components/editar-auto/editar-auto.component';
 import { EditarAutoContainer } from './containers/editar-auto/editar-auto.container';
 
@@ -32,6 +35,8 @@ import { EditarAutoContainer } from './containers/editar-auto/editar-auto.contai
     CommonModule,
     AutosRoutingModule,
     SharedModule,
+    DevextremeModule,
+    FormsModule,
     MaterialModule
   ]
 })

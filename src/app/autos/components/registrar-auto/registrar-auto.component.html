@@ -6,22 +6,26 @@
         <p>Ingresa los datos correspondientes del nuevo auto en el siguiente formulario: </p>
         <hr>
         <p>Nombre:</p>
-        <input style="width: 100%; font-size: 20px" />
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.autoModel.nombre" />
         <br>
         <br>
-        <p>Modelo:</p>
-        <input style="width: 100%; font-size: 20px" />
+        <p>Numero de Motor: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.autoModel.numeroMotor"/>
         <br>
         <br>
-        <p>Año:</p>
-        <input style="width: 100%; font-size: 20px" />
+        <p>Fecha de Ensamble: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.autoModel.fechaEsamble" />
         <br>
         <br>
-        <p>Descripción</p>
-        <input style="width: 100%; font-size: 20px" />
+        <p>Precio del Mercado: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.autoModel.precioMercado"/>
+        <br>
+        <br>
+        <p>ID de la Marca: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.autoModel.marcaId"/>
         <br>
         <br>
         <hr>
-        <button type="button" class="btn btn-outline-secondary float-right" routerLink="../">Enviar</button>
+        <button type="button" class="btn btn-outline-secondary float-right" (click)="this.registrarAutoClicked()">Enviar</button>
     </div>
 </div>
