@@ -1,1 +1,41 @@
-<p>autos-admin works!</p>
+<div class="col-md-2 col-sm-2 col-xs-1 float-right"> <a href="#" class="btn btn-sm animated-button thar-three" routerLink="registrar"> Registrar Auto </a> </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title"> Autos Registrados</h4>
+        </div>
+        <div class="card-body table-responsive">
+            <table class="table table-hover">
+                <thead class="text-danger">
+                    <th class="text-center">#</th>
+                    <th>Autos</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Descripción</th>
+                    <th class="text-right">Acciones</th>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td> i + 1</td>
+                        <td>Nombre</td>
+                        <td>Modelo</td>
+                        <td>Año</td>
+                        <td>Descripción</td>
+                        <td class="td-actions text-right">
+                            <button mat-raised-button type="button" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                <i class="material-icons"><a style="color: #43464b !important" routerLink="editar">edit</a></i>
+                            </button>
+                            <button mat-raised-button type="button" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                <i class="material-icons" style="color: #43464b !important">delete</i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

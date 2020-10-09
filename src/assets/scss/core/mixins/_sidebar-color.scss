@@ -51,7 +51,7 @@
 
 @mixin set-background-color-button($color){
     li.active > a{
-        background-color: rgb(0, 0, 255);
+        background: linear-gradient(60deg, #e53935 , #fb8c00);
         @include shadow-big-color($color);
     }
 }

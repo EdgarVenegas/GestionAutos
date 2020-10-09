@@ -10,6 +10,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { LayoutAdminComponent } from './layout-admin/layout-admin.component';
 import { CoreModule } from '@core/core.module';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from '@core/services/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,13 @@ import { CoreModule } from '@core/core.module';
     BrowserAnimationsModule,
     CoreModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

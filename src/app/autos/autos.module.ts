@@ -13,6 +13,8 @@ import { RegistrarAutoContainer } from './containers/registrar-auto/registrar-au
 
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
+import { EditarAutoComponent } from './components/editar-auto/editar-auto.component';
+import { EditarAutoContainer } from './containers/editar-auto/editar-auto.container';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { MaterialModule } from '../material/material.module';
     RegistrarAutoComponent,
     AutosContainer,
     AutosAdminContainer,
-    RegistrarAutoContainer
+    RegistrarAutoContainer,
+    EditarAutoComponent,
+    EditarAutoContainer
   ],
   imports: [
     CommonModule,

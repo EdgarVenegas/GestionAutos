@@ -115,7 +115,7 @@
   a:focus,
   a:active {
     @include shadow-small-color($brand-primary);
-    background-color: $brand-primary;
+    background: linear-gradient(60deg, #e53935 , #fb8c00);
     color: #FFFFFF;
   }
 }

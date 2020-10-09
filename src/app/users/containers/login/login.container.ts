@@ -12,7 +12,7 @@ import { UserService } from '@core/services/user.service';
 // tslint:disable-next-line: component-class-suffix
 export class LoginContainer implements OnInit {
 
-  imagen = './assets/images/perfil.jpg';
+  imagen = './assets/images/perfil.png';
   model: LoginInputModel = {
     password: '',
     correoElectronico: ''

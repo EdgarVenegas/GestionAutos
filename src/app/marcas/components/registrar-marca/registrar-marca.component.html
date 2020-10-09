@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header card-header-warning">
+        <h4 class="card-title"> Nueva Marca: </h4>
+    </div>
+    <div class="card-body table-responsive">
+        <p>Ingresa el detalle de la marca en el siguiente cuadro de texto: </p>
+        <input style="width: 100%; font-size: 20px" [(ngModel)]="this.marcaModel.nombre" />
+        <hr>
+        <button type="button" class="btn btn-outline-secondary float-right" (click)="this.registrarMarcaClicked()" routerLink="../">Enviar</button>
+    </div>
+</div>

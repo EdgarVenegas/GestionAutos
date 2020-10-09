@@ -42,6 +42,13 @@ export class UserService {
     const data: LoginResponse = this.storage.getJsonValue('User');
     return data;
   }
+  getToken(): string {
+    const data: LoginResponse = this.storage.getJsonValue('User');
+    if (data) {
+      return data.token;
+    }
+    return '';
+  }
   isAuthenticated(): boolean {
     const user = this.storage.getJsonValue('User');
     if (user) {
