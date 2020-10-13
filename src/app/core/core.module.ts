@@ -7,6 +7,7 @@ import { StorageService } from './services/storage.service';
 import { NotifyService } from './services/notify.service';
 
 import { MarcaService } from './services/marca.service';
+import { AutoService } from './services/auto.service';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { MarcaService } from './services/marca.service';
     UserService,
     StorageService,
     NotifyService,
-    MarcaService
+    MarcaService,
+    AutoService
   ]
 })
 export class CoreModule { }
